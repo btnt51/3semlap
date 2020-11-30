@@ -4,10 +4,14 @@
 
 #ifndef INC_3SEMLAP_AFUNCTION_H
 #define INC_3SEMLAP_AFUNCTION_H
+#include <cmath>
+#include <iostream>
 
-
-class AFunction {
-
+class AFunction
+{
+public:
+    virtual void Display() = 0;
+    virtual double Calculating(double x) = 0;
 };
 
 

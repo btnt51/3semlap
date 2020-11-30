@@ -6,8 +6,19 @@
 #define INC_3SEMLAP_CELLIPSE_H
 
 
-class CEllipse {
+#include "AFunction.h"
 
+class CEllipse : public AFunction
+{
+public:
+    CEllipse(double a, double b);
+    void Display() override;
+    double Calculating(double x) override;
+
+private:
+    double A;
+    double B;
+    double y;
 };
 
 

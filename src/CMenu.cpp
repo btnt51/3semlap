@@ -3,3 +3,22 @@
 //
 
 #include "CMenu.h"
+
+CMenu::CMenu()
+{
+
+}
+
+CMenu::~CMenu()
+{
+
+}
+
+void CMenu::menu()
+{
+    std::string Command;
+    while (true)
+    {
+
+    }
+}
