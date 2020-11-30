@@ -14,15 +14,15 @@ public:
 
     ~CMenu();
 
-    void menu();
+    static void menu();
 
-    void Ellipse();
+    static void Ellipse();
 
-    void Hyperbola();
+    static void Hyperbola();
 
-    double InputData(double number, char const *str);
+    static double InputData(double number, char const *str);
 
-    double ZeroCheck(double number);
+    static double ZeroCheck(double number);
 };
 
 

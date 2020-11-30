@@ -20,7 +20,10 @@ CEllipse::CEllipse(double a, double b)
 
 double CEllipse::Calculating(double x)
 {
-    y = sqrt((pow(B,2)/pow(A,2))*(pow(A,2) - pow(x,2)));
+    double bsqr = pow(B,2);
+    double asqr = pow(A,2);
+    double xsqr = pow(x,2);
+    y=sqrt((bsqr/asqr)*(asqr-xsqr));
     return y;
 }
 

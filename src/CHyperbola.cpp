@@ -13,7 +13,10 @@ CHyperbola::CHyperbola(double a, double b)
 
 double CHyperbola::Calculating(double x)
 {
-    y=sqrt((pow(B,2)/pow(A,2))*(pow(x,2)-pow(A,2)));
+    double bsqr = pow(B,2);
+    double asqr = pow(A,2);
+    double xsqr = pow(x,2);
+    y=sqrt((bsqr/asqr)*(xsqr-asqr));
     return y;
 }
 

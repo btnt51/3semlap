@@ -45,18 +45,18 @@ void CMenu::menu()
 
 void CMenu::Hyperbola()
 {
-    std::cout << " Enter A: ";
-    double a;
+    std::cout << "Enter A: ";
+    double a = 0;
     a = InputData(a, "Insert the number");
     a = ZeroCheck(a);
     std::cout << "Enter B: ";
-    double b;
+    double b = 0;
     b = InputData(b, "Insert the number");
     b = ZeroCheck(b);
     CHyperbola hyperbola(a, b);
     std::cout << "Enter x: ";
-    double x;
-    InputData(x, "Insert the number");
+    double x = 0;
+    x = InputData(x, "Insert the number");
     hyperbola.Calculating(x);
     hyperbola.Display();
 }
@@ -64,8 +64,8 @@ void CMenu::Hyperbola()
 void CMenu::Ellipse()
 {
     try {
-        std::cout << "Reminder: For an ellipse, a must be greater than b"<< std::endl;
-        std::cout << " Enter A: ";
+        std::cout << R"(Reminder: For an ellipse, "A" must be greater than "B")"<< std::endl;
+        std::cout << "Enter A: ";
         double a = 0;
         a = InputData(a, "Insert the number");
         a = ZeroCheck(a);
@@ -76,7 +76,7 @@ void CMenu::Ellipse()
         while (a<=b)
         {
             std::cout << "B couldn`t be bigger then A" << std::endl;
-            std::cout << " Enter A: ";
+            std::cout << "Enter A: ";
             a = InputData(a, "Insert the number");
             std::cout << "Enter B: ";
             b = InputData(b, "Insert the number");
@@ -92,7 +92,7 @@ void CMenu::Ellipse()
     {
         if(a == -1)
         {
-            std::cout << "B couldn`t be bigger then A" << std::endl;
+            std::cout << "B couldn't be bigger then A" << std::endl;
         }
     }
 }
