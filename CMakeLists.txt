@@ -3,4 +3,7 @@ project(3semlap)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(3semlap src/main.cpp src/AFunction.h src/CHyperbola.cpp src/CHyperbola.h src/CEllipse.cpp src/CEllipse.h src/inputData.h src/CMenu.cpp src/CMenu.h)
+add_executable(3semlap src/main.cpp src/AFunction.h
+        src/CHyperbola.cpp src/CHyperbola.h
+        src/CEllipse.cpp src/CEllipse.h
+        src/CMenu.cpp src/CMenu.h)

@@ -4,19 +4,25 @@
 
 #ifndef INC_3SEMLAP_CMENU_H
 #define INC_3SEMLAP_CMENU_H
-#include "inputData.h"
+#include <fstream>
 #include "CEllipse.h"
 #include "CHyperbola.h"
 
-class CMenu
-{
+class CMenu {
+public:
     CMenu();
+
     ~CMenu();
+
     void menu();
 
-private:
-    CEllipse ellipse;
-    CHyperbola hyperbola;
+    void Ellipse();
+
+    void Hyperbola();
+
+    double InputData(double number, char const *str);
+
+    double ZeroCheck(double number);
 };
 
 

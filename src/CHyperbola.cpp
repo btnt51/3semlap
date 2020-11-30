@@ -19,5 +19,5 @@ double CHyperbola::Calculating(double x)
 
 void CHyperbola::Display()
 {
-    std::cout << "A = " << A << " B= " << B << " y= " << y << std::endl;
+    std::cout << "A = " << A << "; B = " << B << "; y = " << y <<";"<< std::endl;
 }

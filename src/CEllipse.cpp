@@ -26,5 +26,5 @@ double CEllipse::Calculating(double x)
 
 void CEllipse::Display()
 {
-    std::cout << "A = " << A << " B= " << B << " y= " << y << std::endl;
+    std::cout << "A = " << A << "; B = " << B << "; y = " << y <<";" << std::endl;
 }
