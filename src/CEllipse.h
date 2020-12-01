@@ -7,18 +7,16 @@
 
 
 #include "AFunction.h"
+#include "InputData.h"
+
 
 class CEllipse : public AFunction
 {
 public:
-    CEllipse(double a, double b);
+    CEllipse();
     void Display() override;
     double Calculating(double x) override;
-
-private:
-    double A;
-    double B;
-    double y;
+    void Input(double &x) override;
 };
 
 

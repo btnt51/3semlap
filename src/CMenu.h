@@ -5,8 +5,10 @@
 #ifndef INC_3SEMLAP_CMENU_H
 #define INC_3SEMLAP_CMENU_H
 #include <fstream>
+#include "AFunction.h"
 #include "CEllipse.h"
 #include "CHyperbola.h"
+
 
 class CMenu {
 public:
@@ -14,15 +16,13 @@ public:
 
     ~CMenu();
 
-    static void menu();
+    void menu();
 
-    static void Ellipse();
+    void Ellipse();
 
-    static void Hyperbola();
+    void WorkWithBaseClass(AFunction *Afunc);
 
-    static double InputData(double number, char const *str);
-
-    static double ZeroCheck(double number);
+    void Hyperbola();
 };
 
 
