@@ -5,13 +5,19 @@
 #ifndef INC_3SEMLAP_AFUNCTION_H
 #define INC_3SEMLAP_AFUNCTION_H
 #include <cmath>
-#include <iostream>
+
 
 class AFunction
 {
 public:
     virtual void Display() = 0;
     virtual double Calculating(double x) = 0;
+    virtual void Input(double &x) = 0;
+
+protected:
+    double A{};
+    double B{};
+    double y{};
 };
 
 

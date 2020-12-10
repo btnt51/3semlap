@@ -45,86 +45,29 @@ void CMenu::menu()
 
 void CMenu::Hyperbola()
 {
-    std::cout << "Enter A: ";
-    double a = 0;
-    a = InputData(a, "Insert the number");
-    a = ZeroCheck(a);
-    std::cout << "Enter B: ";
-    double b = 0;
-    b = InputData(b, "Insert the number");
-    b = ZeroCheck(b);
-    CHyperbola hyperbola(a, b);
-    std::cout << "Enter x: ";
-    double x = 0;
-    x = InputData(x, "Insert the number");
-    hyperbola.Calculating(x);
-    hyperbola.Display();
+    auto Hyperbola = new CHyperbola();
+    WorkWithBaseClass(Hyperbola);
+    delete Hyperbola;
 }
 
 void CMenu::Ellipse()
 {
+    CEllipse ellipse;
+    WorkWithBaseClass(&ellipse);
+}
+
+void CMenu::WorkWithBaseClass(AFunction *Afunc)
+{
     try {
-        std::cout << R"(Reminder: For an ellipse, "A" must be greater than "B")"<< std::endl;
-        std::cout << "Enter A: ";
-        double a = 0;
-        a = InputData(a, "Insert the number");
-        a = ZeroCheck(a);
-        std::cout << "Enter B: ";
-        double b = 0;
-        b = InputData(b, "Insert the number");
-        b = ZeroCheck(b);
-        while (a<=b)
-        {
-            std::cout << "B couldn`t be bigger then A" << std::endl;
-            std::cout << "Enter A: ";
-            a = InputData(a, "Insert the number");
-            std::cout << "Enter B: ";
-            b = InputData(b, "Insert the number");
-        }
-        CEllipse ellipse(a, b);
-        std::cout << "Enter x: ";
-        double x = 0;
-        x = InputData(x, "Insert the number");
-        ellipse.Calculating(x);
-        ellipse.Display();
+        double x{};
+        Afunc->Input(x);
+        Afunc->Calculating(x);
+        Afunc->Display();
     }
-    catch(int a)
+    catch (int a)
     {
         if(a == -1)
-        {
-            std::cout << "B couldn't be bigger then A" << std::endl;
-        }
+            std::cout << "WE couldn`t calculate it" << std::endl;
     }
 }
 
-double CMenu::InputData(double number, const char *str) {
-    bool validInput;
-    std::cin.exceptions(std::ifstream::failbit);
-    do
-    {
-        try
-        {
-            validInput = true;
-            std::cin >> number;
-        }
-        catch (std::ios_base::failure &fail)
-        {
-            validInput = false;
-            std::cin.clear();
-            std::string dummy;
-            std::cin >> dummy;
-            std::cout << str << std::endl;
-        }
-    } while(!validInput);
-    return number;
-}
-
-double CMenu::ZeroCheck(double number)
-{
-    while (number == 0)
-    {
-        std::cout<<"Division by zero is not possible" << std::endl;
-        number = InputData(number, "Insert the number");
-    }
-    return number;
-}
