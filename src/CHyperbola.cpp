@@ -16,7 +16,7 @@ double CHyperbola::Calculating(double x)
     double bsqr = pow(B,2);
     double asqr = pow(A,2);
     double xsqr = pow(x,2);
-    y=sqrt((bsqr/asqr)*(xsqr-asqr));
+    y = sqrt((bsqr/asqr)*(xsqr-asqr));
     return y;
 }
 

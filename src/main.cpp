@@ -3,7 +3,6 @@
 
 int main()
 {
-    CMenu menu;
-    menu.menu();
+    CMenu::menu();
     return 0;
 }
