@@ -13,11 +13,11 @@ CEllipse::CEllipse()
 
 double CEllipse::Calculating(double x)
 {
-    double bsqr = pow(B, 2);
-    double asqr = pow(A, 2);
-    double xsqr = pow(x, 2);
-    y = sqrt((bsqr / asqr) * (asqr - xsqr));
-    if(y != y)
+    double bsqr = pow(B, 2);//1
+    double asqr = pow(A, 2);//4
+    double xsqr = pow(x, 2);//0
+    y = sqrt((bsqr / asqr)/*1/4*/ * (asqr - xsqr)/*4*/);
+    if(y != -y)
     {
         throw -1;
     }
